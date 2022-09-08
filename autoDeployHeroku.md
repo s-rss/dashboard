@@ -18,3 +18,17 @@
 
 
 然后就可以在每一次 git push 到 GitHub 后就会自动部署到 Heroku 了
+
+> Tips: 
+> 
+> 部署之前我们需要创建一个类似启动脚本的文件 Procfile
+> ```
+> // Profile 
+> web: node lib/index.js
+> ```
+> 这个文件告诉 Heroku需要创建一个web 容器, 同时执行 node lib/index.js 来启动程序，更多的详细信息在这里 [Process Types and the Procfile](https://devcenter.heroku.com/articles/procfile)
+
+
+## 参考链接
+
+- [在 Heroku 上开发、部署Node程序的快速指南](https://segmentfault.com/a/1190000013987807)
